@@ -13,7 +13,7 @@ async function getProfile() {
     try {
 
         const response = await fetch(
-            "http://localhost:3000/api/users/profile",
+            " https://task-manager-jyrx.onrender.com/api/users/profile",
             {
 
                 method: "GET",
@@ -80,7 +80,7 @@ imageInput.addEventListener("change", async () => {
     try {
 
         const response = await fetch(
-            "http://localhost:3000/api/users/upload-profile",
+            " https://task-manager-jyrx.onrender.com/api/users/upload-profile",
             {
                 method: "POST",
 

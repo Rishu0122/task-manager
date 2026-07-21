@@ -11,7 +11,7 @@ registerForm.addEventListener("submit", async (e) => {
     const password = document.getElementById("password").value;
 
     const response = await fetch(
-        "http://localhost:3000/api/users/register",
+        " https://task-manager-jyrx.onrender.com/api/users/register",
         {
             method: "POST",
 

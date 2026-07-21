@@ -10,7 +10,7 @@ async function getProfile() {
     try {
 
         const response = await fetch(
-            "http://localhost:3000/api/users/profile",
+            " https://task-manager-jyrx.onrender.com/api/users/profile",
             {
                 method: "GET",
                 headers: {
@@ -71,7 +71,7 @@ form.addEventListener("submit", async (e) => {
 
         // UPDATE TASK
         response = await fetch(
-            `http://localhost:3000/api/tasks/update/${editingTaskId}`,
+            ` https://task-manager-jyrx.onrender.com/api/tasks/update/${editingTaskId}`,
             {
                 method: "PUT",
                 headers: {
@@ -91,7 +91,7 @@ form.addEventListener("submit", async (e) => {
 
         // CREATE TASK
         response = await fetch(
-            "http://localhost:3000/api/tasks/create",
+            " https://task-manager-jyrx.onrender.com/api/tasks/create",
             {
                 method: "POST",
                 headers: {
@@ -130,7 +130,7 @@ async function getAllTask() {
 
     const token = localStorage.getItem("token");
     const response = await fetch(
-            "http://localhost:3000/api/tasks",
+            " https://task-manager-jyrx.onrender.com/api/tasks",
             {
                 method: "GET",
                 headers: {
@@ -211,7 +211,7 @@ async function getAllTask() {
                     button.addEventListener("click", async (e) => {
                         const id = button.dataset.id
                         const response = await fetch(
-            `http://localhost:3000/api/tasks/delete/${id}`,
+            ` https://task-manager-jyrx.onrender.com/api/tasks/delete/${id}`,
             {
                 method: "DELETE",
                 headers: {
