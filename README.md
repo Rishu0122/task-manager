@@ -102,7 +102,7 @@ JWT_SECRET=your_secret_key
 ## Live Demo
 
 Frontend:
-https://6a5fbdf4fc84d6609634a9a1--dazzling-mousse-f53346.netlify.app/login.html
+https://6a5fc9f50ccbeb3b2282b850--dazzling-mousse-f53346.netlify.app
 
 Backend:
 https://task-manager-jyrx.onrender.com
