@@ -99,6 +99,31 @@ JWT_SECRET=your_secret_key
 
 ---
 
+## Live Demo
+
+Frontend:
+https://6a5fbdf4fc84d6609634a9a1--dazzling-mousse-f53346.netlify.app/login.html
+
+Backend:
+https://task-manager-jyrx.onrender.com
+
+---
+
+## Tech Stack
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express.js
+- MongoDB Atlas
+- JWT
+- Cloudinary
+- Render
+- Netlify
+
+---
+
+
 ## 👨‍💻 Author
 
 **Rishabh**
