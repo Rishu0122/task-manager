@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="./css/home.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>Task Manager</h2>
+
+        <div class="profileSection">
+
+            <img id="profileImage">
+
+            <span id="welcomeUser"></span>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <div class="card" onclick="window.location.href='./profile.html'">
+
+            👤
+
+            <h3>Profile</h3>
+
+            <p>View and edit your profile</p>
+
+        </div>
+
+        <div class="card" >
+
+            📋
+
+            <h3>My Tasks</h3>
+
+            <p>View all your tasks</p>
+
+        </div>
+
+        <div class="card" id="createTask">
+
+            ➕
+
+            <h3>Create Task</h3>
+
+            <p>Add a new task</p>
+
+        </div>
+
+        
+
+        <div class="card" onclick="window.location.href= './login.html'">
+
+            🚪
+
+            <h3>Logout</h3>
+
+            <p>Logout from account</p>
+
+        </div>
+
+    </div>
+
+    <div id="taskModal">
+
+    <div id="taskContainer">
+
+        <h2 id="create">Create Task</h2>
+    <form action="" id="taskCreation">
+        <label for="title">Title</label>
+        <input id="title">
+
+        <label for="Description">Description</label>
+        <textarea id="Description"></textarea>
+
+
+        <label  for="Status">Status</label>
+
+        <select name="Status" id="Status">
+            <option value="pending">Pending</option>
+            <option value="in-progress">in-progress</option>
+            <option value="complete">complete</option>
+        </select>
+
+        <label for="Priority">Priority</label>
+
+        <select name="Priority" id="Priority">
+            <option value="low">low</option>
+            <option value="medium">medium</option>
+            <option value="high">high</option>
+        </select>
+
+        <button type="submit" id="updatetask">Create Task</button>
+
+        <button type="button" id="closetask">Close Task</button>
+</form>
+    </div>
+
+</div>
+
+    <section id="taskSection">
+
+        <h2>My Tasks</h2>
+
+        <div id="taskList">
+
+        </div>
+
+    </section>
+
+
+<script src="./js/home.js"></script>
+
+</body>
+
+</html>

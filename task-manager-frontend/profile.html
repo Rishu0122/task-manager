@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Profile</h2>
+
+        <img
+            id="profileImage"
+            src=""
+            width="120"
+            height="120"
+            style="border-radius:50%; object-fit:cover;"
+        >
+
+
+        <p id="loading" style="display:none;">
+            Uploading...
+        </p>
+
+
+        <input type="file" id="image" accept="image/">
+
+
+        <h3 id="name"></h3>
+
+        <p id="email"></p>
+
+        <p id="role"></p>
+
+        <label for="image" class="uploadLabel">
+
+            📷 Change Profile Photo
+
+        </label>
+        
+
+        <button id="go-back">Go-Back</button>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+
+    <script src="./js/profile.js"></script>
+
+</body>
+
+</html>
