@@ -12,7 +12,7 @@ const registerUser = async (req, res) => {
         return res.status(400).json({
             success: false,
             massage: "all the feild are require"
-        })
+        }) 
     }
 
     const existingUser = await User.findOne({email})

@@ -126,9 +126,37 @@ const deleteTask = async (req, res) => {
     })
 }
 
+const search = async (req, res) => {
+
+    const taskSearch = req.query.search
+    const tasks = await task.find({
+        user:req.user.id,
+        title: {
+            $regex: taskSearch,
+            $options: "i"
+        }
+    });
+
+    if(!tasks) {
+        return res.status(400).json({
+            success:false,
+            massage:"access denied"
+        })
+    }
+
+    return res.status(200).json({
+        success:true,
+        massage:"result found",
+        tasks:tasks
+    })
+
+    console.log(req.query.search);
+}
+
 module.exports = {
     createdTask,
     findTask,
     updateTask,
-    deleteTask
+    deleteTask,
+    search
 }
