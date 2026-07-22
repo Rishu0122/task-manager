@@ -1,3 +1,5 @@
+
+
 let editingTaskId = null;
 const token = localStorage.getItem("token");
 
@@ -211,7 +213,7 @@ async function getAllTask() {
                     button.addEventListener("click", async (e) => {
                         const id = button.dataset.id
                         const response = await fetch(
-            ` https://task-manager-jyrx.onrender.com/api/tasks/delete/${id}`,
+            `https://task-manager-jyrx.onrender.com/api/tasks/delete/${id}`,
             {
                 method: "DELETE",
                 headers: {
@@ -225,6 +227,47 @@ async function getAllTask() {
                     })
                 })
 }
+
+const search = document.getElementById("search")
+
+search.addEventListener("input", async (e) => {
+    const searchText = e.target.value;
+
+    const response = await fetch(
+        `https://task-manager-jyrx.onrender.com/api/tasks/search?search=${searchText}`,
+        {
+            method:"GET",
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+    )
+    const data = await response.json()
+            console.log(data)
+
+        const div = document.getElementById("taskList");
+
+div.innerHTML = "";
+
+data.tasks.forEach((task) => {
+    div.innerHTML += `
+        <div class="task-card">
+            <h3>${task.title}</h3>
+            <p>${task.description}</p>
+            <p>${task.status}</p>
+            <p>${task.priority}</p>
+
+            <button class="editButton" data-id="${task._id}">
+                Edit
+            </button>
+
+            <button class="deleteButton" data-id="${task._id}">
+                Delete
+            </button>
+        </div>
+    `;
+});
+})
 
 
 
